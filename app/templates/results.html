@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Results</title>
+</head>
+<body>
+    <h2>Prediction Results</h2>
+    {% for item in results %}
+        <div style="margin-bottom: 30px;">
+            <img src="{{ item.image_url }}" alt="Image" width="200"><br>
+            <strong>Actual Class:</strong> {{ item.actual_class }}<br>
+            <strong>Predicted Class:</strong> {{ item.predicted_class }}<br>
+            <strong>Probability:</strong> {{ item.probability }}%
+        </div>
+    {% endfor %}
+    <a href="/">Upload More</a>
+</body>
+</html>
